@@ -14,13 +14,13 @@ import io.swagger.annotations.ApiModelProperty;
  * @author ruanxy
  * @since 2021-10-22
  */
-@TableName("sys_user")
-@ApiModel(value = "SysUser对象", description = "")
-public class SysUser implements Serializable {
+@TableName("sys_role")
+@ApiModel(value = "SysRole对象", description = "")
+public class SysRole implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String id;
+    private Integer id;
 
     private LocalDateTime createDate;
 
@@ -34,15 +34,13 @@ public class SysUser implements Serializable {
 
     private String name;
 
-    private String loginName;
+    private String code;
 
-    private String password;
-
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public LocalDateTime getCreateDate() {
@@ -87,24 +85,17 @@ public class SysUser implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-    public String getLoginName() {
-        return loginName;
+    public String getCode() {
+        return code;
     }
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
-    }
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     @Override
     public String toString() {
-        return "SysUser{" +
+        return "SysRole{" +
             "id=" + id +
             ", createDate=" + createDate +
             ", createBy=" + createBy +
@@ -112,8 +103,7 @@ public class SysUser implements Serializable {
             ", updateBy=" + updateBy +
             ", delFlag=" + delFlag +
             ", name=" + name +
-            ", loginName=" + loginName +
-            ", password=" + password +
+            ", code=" + code +
         "}";
     }
 }

@@ -19,7 +19,7 @@ public class MyBatisPlusGenerator {
     private static final String JDBC_USER_NAME = "root";
 //    private static final String JDBC_PASSWORD = PropertiesUtil.getProperties().getStringProperty("spring.datasource.password");
     private static final String JDBC_PASSWORD = "123456";
-    private static final String TABLE_NAME = "sys_user";
+    private static final String TABLE_NAME = "sys_role";
 
 
     public static void main(String[] args) {
